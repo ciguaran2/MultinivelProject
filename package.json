@@ -1,0 +1,48 @@
+{
+  "name": "multinivelproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src /index.js --exec babel-node",
+    "build": "babel src -d dist",
+    "start": "node dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.0",
+    "morgan": "^1.10.0",
+    "mssql": "^9.1.1",
+    "react-autosuggest": "^10.1.0",
+    "react-hook-form": "^7.45.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "nodemon": "^3.0.1"
+  },
+  "distributions": {
+    "default": "compass",
+    "compass": {
+      "name": "mongodb-compass",
+      "plugins": [
+        "node_modules/@mongodb-js/compass-aggregations"
+      ],
+      "styles": [
+        "index"
+      ]
+    }
+  },
+  "description": ""
+}

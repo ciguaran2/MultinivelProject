@@ -1,0 +1,9 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: #000203;
+    color: white
+}
