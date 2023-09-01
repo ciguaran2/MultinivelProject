@@ -1,4 +1,4 @@
-import Dropdown from '../components/DropDown.jsx'
+import { Dropdown } from '../components/DropDown.jsx'
 
 function HomePage(){
 
