@@ -3,8 +3,8 @@
       {
         "type": "chrome",
         "request": "launch",
-        "name": "Launch Chrome against localhost",
-        "url": "http://localhost:5173",
+        "name": "Launch Chrome server",
+        "url": "https://susu-397516.rj.r.appspot.com/",
         "webRoot": "${workspaceFolder}"
       }
     ]
