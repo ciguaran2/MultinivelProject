@@ -11,7 +11,7 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors({
-    origin: 'https://susu-397516.rj.r.appspot.com/',
+    origin: 'http://localhost:5173',
     credentials: true
 }))
 app.use(morgan('dev'))

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://susu-397516.rj.r.appspot.com/api',
+    baseURL: 'http://localhost:3000/api',
     withCredentials: true
 })
 
