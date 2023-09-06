@@ -10,7 +10,10 @@ import cors from 'cors'
 
 const app = express();
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://susu-397516.rj.r.appspot.com',
+    credentials: true
+}))
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cookieParser())
