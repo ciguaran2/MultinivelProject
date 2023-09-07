@@ -1,4 +1,4 @@
-import { useProducts } from "../context/ProductsContext";
+import { useProducts } from "../context/ProductsContext.jsx";
 import { Link } from "react-router-dom";
 
 function ProductCard({ product }){

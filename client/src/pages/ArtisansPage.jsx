@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import { useArtisans } from "../context/ArtisansContext"
-import ArtisanCard from "../components/ArtisanCard";
+import { useArtisans } from "../context/ArtisansContext,jsx"
+import ArtisanCard from "../components/ArtisanCard.jsx";
 
 function ArtisansPage(){
 
