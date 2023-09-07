@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { createLeadRequest, getLeadsRequest, deleteLeadRequest, getLeadRequest, updateLeadRequest} from '../api/leads'
+import { createLeadRequest, getLeadsRequest, deleteLeadRequest, getLeadRequest, updateLeadRequest} from '../api/leads.js'
 
 const LeadContext = createContext();
 
