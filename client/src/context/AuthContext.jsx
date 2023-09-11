@@ -66,6 +66,7 @@ export const AuthProvider = ({ children }) => {
             const cookies = Cookies.get();
         
             if(!cookies.token){
+                console.log("Matilde Iguaran")
                 setIsAuthenticated(false);
                 setLoading(false);
                 return setUser(null);
