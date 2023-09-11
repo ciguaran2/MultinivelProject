@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { authRequired } from "../middlewares/validateToken";
-import { getArtisans, getArtisan, createArtisan, updateArtisan, deleteArtisan } from '../controllers/artisan.controller.js'
-import {validateSchema} from '../middlewares/validator.middleware.js'
-import {createArtisanSchema, updateArtisanSchema} from '../schemas/artisan.schema.js'
+import { getArtisans, getArtisan, createArtisan, updateArtisan, deleteArtisan } from '../controllers/artisan.controller'
+import {validateSchema} from '../middlewares/validator.middleware'
+import {createArtisanSchema, updateArtisanSchema} from '../schemas/artisan.schema'
 
 const router = Router()
 

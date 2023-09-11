@@ -1,5 +1,5 @@
 import app from './App.js'
-import {connectDB} from './db.js'
+import {connectDB} from './db'
 
 connectDB()
 app.listen(3000)

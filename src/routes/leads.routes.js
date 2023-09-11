@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { authRequired } from "../middlewares/validateToken";
 import { getLeads, getLead, createLead, updateLead, deleteLead } from '../controllers/leads.controller'
-import {validateSchema} from '../middlewares/validator.middleware.js'
-import {createLeadSchema, updateLeadSchema} from '../schemas/lead.schema.js'
+import {validateSchema} from '../middlewares/validator.middleware'
+import {createLeadSchema, updateLeadSchema} from '../schemas/lead.schema'
 
 const router = Router()
 
