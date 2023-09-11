@@ -1,4 +1,3 @@
-'use strict';
 import express  from "express";
 import morgan from 'morgan'
 import cookieParser from "cookie-parser";
@@ -11,8 +10,8 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors({
-    //origin: 'http://localhost:5173',
-    origin: 'https://susu-397516.rj.r.appspot.com',
+    origin: 'http://localhost:5173',
+    //origin: 'https://susu-397516.rj.r.appspot.com',
     credentials: true
 }))
 app.use(morgan('dev'))

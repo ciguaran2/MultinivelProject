@@ -1,11 +1,14 @@
-'use strict';
 import axios from 'axios'
 
 const instance = axios.create({
-    //baseURL: 'http://localhost:3000/api',
-    baseURL: 'https://susu-wayuu.ciguaran2.repl.co/api',
+    baseURL: 'http://localhost:3000/api',
+    //baseURL: 'https://susu-wayuu.ciguaran2.repl.co/api',
     //baseURL: 'https://susu-wayuu-backend.uc.r.appspot.com/api',
     withCredentials: true
-})
+    
+    
+}
 
+)
+console.log("withCredentials param is in: "+ withCredentials)
 export default instance

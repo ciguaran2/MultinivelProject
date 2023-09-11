@@ -1,5 +1,5 @@
 import {useForm} from 'react-hook-form'
-import { useLeads } from '../context/LeadsContext.jsx';
+import { useLeads } from '../context/LeadsContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect,useState } from 'react';
 

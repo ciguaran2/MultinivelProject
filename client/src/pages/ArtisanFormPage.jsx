@@ -1,9 +1,9 @@
 import '../custom.css';
 import {useForm} from 'react-hook-form'
-import { useArtisans } from '../context/ArtisansContext.jsx';
+import { useArtisans } from '../context/ArtisansContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import {getLeadsRequest} from '../api/leads.js'
+import {getLeadsRequest} from '../api/leads'
 
 
 function ArtisanFormPage(){

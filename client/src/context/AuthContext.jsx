@@ -1,5 +1,5 @@
 import {createContext, useContext, useEffect, useState} from 'react'
-import {registerRequest, loginRequest, verifyTokenRequest} from '../api/auth.js'
+import {registerRequest, loginRequest, verifyTokenRequest} from '../api/auth'
 import Cookies from 'js-cookie'
 
 export const AuthContext = createContext()
@@ -66,7 +66,6 @@ export const AuthProvider = ({ children }) => {
             const cookies = Cookies.get();
         
             if(!cookies.token){
-                console.log("Matilde Iguaran")
                 setIsAuthenticated(false);
                 setLoading(false);
                 return setUser(null);

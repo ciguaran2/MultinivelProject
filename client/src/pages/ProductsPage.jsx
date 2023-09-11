@@ -1,7 +1,6 @@
 import { useEffect } from "react"
-import { useProducts } from "../context/ProductsContext.jsx"
-import ProductCard from "../components/ProductCard.jsx"
-import {GridComponent} from '@syncfusion/ej2-react-grids'
+import { useProducts } from "../context/ProductsContext"
+import ProductCard from "../components/ProductCard"
 
 function ProductsPage(){
 
