@@ -10,9 +10,14 @@ export function createAccessToken(payload){
             {
                 expiresIn: "1d"
             },
-            (err, tokenx) =>{
+            {
+                httpOnly: false, // client can't get cookie by script
+                secure: true, // only transfer over https
+                sameSite: "None" // only sent for requests to the same FQDN as the domain in the cookie
+            },
+            (err, token) =>{
                 if (err) reject(err)  
-                resolve(tokenx) 
+                resolve(token) 
             }
         );
     }

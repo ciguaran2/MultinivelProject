@@ -14,8 +14,10 @@ app.use(cors({
     origin: ['https://susu-397516.rj.r.appspot.com'],
     methods: ['GET', 'PUT', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token'],
-    credentials: true
+    credentials: true,
+    exposedHeaders: ['*', 'Authorization' ] ,
 }))
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cookieParser())
