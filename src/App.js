@@ -11,10 +11,8 @@ const app = express();
 
 app.use(cors({
     //origin: 'http://localhost:5173',
-    origin: ['https://susu-397516.rj.r.appspot.com'],
-    methods: ['GET', 'PUT', 'POST'],
-    credentials: true,
-    exposedHeaders: ['*', 'Authorization' ]
+    origin: 'https://susu-397516.rj.r.appspot.com',
+    credentials: true
 }))
 
 app.use(morgan('dev'))
