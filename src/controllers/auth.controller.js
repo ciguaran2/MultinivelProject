@@ -48,7 +48,12 @@ export const login = async (req, res) =>{
     if(!isMatch) return res.status(400).json({message:"Incorrect password"})
     
     const token = await createAccessToken({id:userFound._id})
-    res.cookie('token', token)
+    const options = {
+        httpOnly: true, // client can't get cookie by script
+        secure: true, // only transfer over https
+        sameSite: false, // only sent for requests to the same FQDN as the domain in the cookie
+      }
+    res.cookie('token', token, options)
     
     res.json({
         id:userFound._id,
@@ -57,11 +62,12 @@ export const login = async (req, res) =>{
         createdAt:userFound.createdAt,
         updatedAt: userFound.updatedAt,
     })
-
     
    } catch (error) {
     res.status(500).json({ message: error.message})
+    
    }
+   
 }
 
 export const logout = async(req,res) =>{
