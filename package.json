@@ -27,6 +27,7 @@
     "nodejs": "^0.0.0",
     "react-autosuggest": "^10.1.0",
     "react-hook-form": "^7.45.2",
+    "request": "^2.88.2",
     "serve": "^14.2.1",
     "zod": "^3.21.4"
   },
