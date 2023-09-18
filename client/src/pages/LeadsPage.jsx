@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useLeads } from "../context/LeadsContext"
+import { useLeads } from "../context/LeadsContext.jsx"
 import LeadCard from "../components/LeadCard.jsx";
 
 function LeadsPage(){

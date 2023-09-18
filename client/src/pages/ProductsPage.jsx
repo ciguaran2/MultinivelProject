@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import { useProducts } from "../context/ProductsContext"
-import ProductCard from "../components/ProductCard"
+import { useProducts } from "../context/ProductsContext.jsx"
+import ProductCard from "../components/ProductCard.jsx"
 
 function ProductsPage(){
 

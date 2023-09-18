@@ -37,20 +37,23 @@ export const AuthProvider = ({ children }) => {
             console.log(res)
             setIsAuthenticated(true)
             setUser(res.data)
+            
         } catch (error) {
             if(Array.isArray(error.response.data)){
               return setErrors(error.response.data)
             }
             setErrors([error.response.data.message])
         }
+        console.log("Estoy en el signin y setIsAuthenticated es " + isAuthenticated)
 
-    }
+    };
 
     const logout = () =>{
         Cookies.remove('token');
         setIsAuthenticated(false);
         setUser(null);
-    }
+        console.log("Estoy en el LOGOUT")
+    };
 
     useEffect(()=> {
         if(errors.length>0){
@@ -64,27 +67,32 @@ export const AuthProvider = ({ children }) => {
     useEffect(()=> {
         async function checkLogin(){
             const cookies = Cookies.get();
-        
+            console.log("las cookies: " + cookies.token)
             if(!cookies.token){
                 setIsAuthenticated(false);
                 setLoading(false);
+                console.log(" if(!cookies.token){ Estoy en el checkLogin y isAuthenticated es " + isAuthenticated)
                 return setUser(null);
             }   
                 try {
                     const res = await verifyTokenRequest(cookies.token)
+                    console.log("Esto es res: "+ cookies.token)
                     if(!res.data) {
                         setIsAuthenticated(false);
                         setLoading(false);
+                        console.log(" verifyTokenRequest(cookies.token) Estoy en el checkLogin y isAuthenticated es " + isAuthenticated)
                         return;
                     }
                     setIsAuthenticated(true);
                     setUser(res.data);
                     setLoading(false);
+                    console.log(" happy -- Estoy en el checkLogin y isAuthenticated es " + isAuthenticated)
                     
                 } catch (error) {
                     setIsAuthenticated(false);
                     setUser(null);
                     setLoading(false);
+                    console.log(" catch error -  Estoy en el checkLogin y isAuthenticated es " + isAuthenticated)
                 }
         }
         checkLogin();

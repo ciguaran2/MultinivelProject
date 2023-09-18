@@ -1,5 +1,5 @@
 import {useForm} from 'react-hook-form'
-import { useProducts } from '../context/ProductsContext';
+import { useProducts } from '../context/ProductsContext.jsx';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
