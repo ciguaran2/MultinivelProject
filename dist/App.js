@@ -15,8 +15,8 @@ var _artisanRoutes = _interopRequireDefault(require("./routes/artisan.routes.js"
 var _cors = _interopRequireDefault(require("cors"));
 var app = (0, _express["default"])();
 app.use((0, _cors["default"])({
-  //origin: 'http://localhost:5173',
-  origin: 'https://susu-wayuu.up.railway.app',
+  origin: 'http://localhost:5173',
+  //origin: 'https://susu-wayuu.up.railway.app',
   credentials: true
 }));
 app.use((0, _morgan["default"])('dev'));
